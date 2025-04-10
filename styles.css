@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    @font-face {
+        font-family: 'Bahnschrift';
+        src: url('libs/font/Bahnschrift-Font-Family/Bahnschrift.TTF') format('ttf');
+    }
+}
+
+/*Parent box*/
+.menu__slide {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu__slide[data-side="left"] .menu__description {
+    margin-right: auto;
+    padding: 2vw 0 2vw 2vw;
+}
+
+.menu__slide[data-side="right"] .menu__description {
+    margin-left: auto;
+    padding: 2vw 2vw 2vw 0;
+}
+
+.menu__slide[data-side="left"] .menu__description .menu__header-block {
+    flex-direction: row-reverse;
+}
+
+.menu__slide[data-side="left"] .menu__description .menu__header-block .menu__date {
+    margin-left: unset;
+    margin-right: auto;
+}
+
+.menu__slide[data-side="right"] .menu__description .menu__header-block .menu__date .menu__date-day {
+    margin-left: auto;
+}
+
+.menu__slide[data-side="left"] .menu__description .menu__header-block .menu__date .menu__date-day {
+    margin-right: auto;
+    margin-left: unset;
+}
+
+.menu__slide[data-meal="dinner"] .menu__description .menu__title {
+    margin: 1.5vw auto;
+}
+
+.menu__img {
+    position: absolute;
+    display: flex;
+    /*height: 100vh;*/
+    width: 100%;
+    max-width: 100vw;
+    object-fit: scale-down;
+    z-index: -1;
+}
+
+/*Description*/
+.menu__description {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    font-family: Bahnschrift, sans-serif;
+    font-size: 55px;
+    width: 80%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.menu__header-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.menu__diet {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    line-height: 1;
+    font-size: 4vw;
+}
+
+.menu__date {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-left: auto;
+    line-height: 1;
+    color: #8FAADC;
+    font-size: 4vw;
+}
+
+.menu__date-day {
+    text-decoration: underline;
+}
+
+.menu__title {
+    line-height: 1;
+    margin: 2vw auto;
+    color: yellow;
+    font-weight: 600;
+    font-size: 4vw;
+    text-transform: uppercase;
+}
+
+.menu__meals-block {
+    margin: 0;
+    padding: 0;
+}
+
+.menu__meals-item {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.2;
+    color: white;
+    font-weight: 600;
+    font-size: 3vw;
+}
+
+.menu__meals-name {
+    margin: 0;
+}
+
+.menu__footer-block {
+    margin: auto 0 0 0;
+    padding: 0;
+    font-size: 2vw;
+    line-height: 1.2;
+    color: white;
+    font-weight: 600;
+    max-width: 80%;
+}
+
+.menu__responsible-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1024px) {
+    .menu__responsible-item {
+
+    }
+}
